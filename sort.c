@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* Insertion Sort function example from Rosetta Code */
 void insertion_sort(int*, const size_t); 
 
 void insertion_sort(int *a, const size_t n) {
