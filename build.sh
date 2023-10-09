@@ -29,5 +29,9 @@ s390x-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps >
 cd ../arc-linux-gnu
 arc-linux-gnu-gcc ../$1.c -g $CFLAGS
 arc-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
+#Build M68K
+cd ../m68k-linux-gnu
+m68k-linux-gnu-gcc ../$1.c -g $CFLAGS
+m68k-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
 #Return
 cd ..
