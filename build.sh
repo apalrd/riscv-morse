@@ -25,5 +25,9 @@ mips64-linux-gnuabi64-objdump -S -t a.out --source-comment="# " -g --visualize-j
 cd ../s390-linux-gnu
 s390x-linux-gnu-gcc ../$1.c -g $CFLAGS
 s390x-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
+#Build ARC
+cd ../arc-linux-gnu
+arc-linux-gnu-gcc ../$1.c -g $CFLAGS
+arc-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
 #Return
 cd ..
