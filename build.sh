@@ -33,5 +33,9 @@ arc-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $
 cd ../m68k-linux-gnu
 m68k-linux-gnu-gcc ../$1.c -g $CFLAGS
 m68k-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
+#Build SPARC
+cd ../sparc64-linux-gnu
+sparc64-linux-gnu-gcc ../$1.c -g $CFLAGS
+sparc64-linux-gnu-objdump -S -t a.out --source-comment="# " -g --visualize-jumps > $1.asm
 #Return
 cd ..
